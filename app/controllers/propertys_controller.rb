@@ -6,6 +6,7 @@ class PropertysController < ApplicationController
       @property = Property.new(property_params)
     else
       @property = Property.new
+      @property.nearest_stations.build
     end
   end
 

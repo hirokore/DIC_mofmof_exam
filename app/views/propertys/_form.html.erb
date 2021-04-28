@@ -9,19 +9,28 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label "物件名" %>
-    <%= f.text_field :name %>
-    <%= f.label "賃料" %>
-    <%= f.text_field :value %>
-    <%= f.label "住所" %>
-    <%= f.text_field :address %>
-    <%= f.label "築年数" %>
-    <%= f.text_field :age %>
-    <%= f.label "備考" %>
-    <%= f.text_area :memo %>
-    
-    <%= f.submit "登録"%>
+  <div class="property_form">
+    <%= f.label "物件名" %><br>
+    <%= f.text_field :name %><br>
+    <%= f.label "賃料" %><br>
+    <%= f.text_field :value %><br>
+    <%= f.label "住所" %><br>
+    <%= f.text_field :address %><br>
+    <%= f.label "築年数" %><br>
+    <%= f.text_field :age %><br>
+    <%= f.label "備考" %><br>
+    <%= f.text_area :memo %><br>
   </div>
+  <div class="station_form">
+    
+    <%= f.fields_for :nearest_stations do |near| %>
+      <%= near.label "路線名" %><br>
+      <%= near.text_field :route %><br>
+      <%= near.label "駅名" %><br>
+      <%= near.text_field :station %><br>
+      <%= near.label "徒歩分数" %><br>
+      <%= near.text_field :time %><br><br>
+      <%= f.submit "登録する"%>
+      </div>
+    <% end %>
 <% end %>

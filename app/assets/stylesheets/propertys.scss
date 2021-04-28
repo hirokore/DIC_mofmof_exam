@@ -1,3 +1,13 @@
-// Place all the styles related to the propertys controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  margin: 10px 0 0 0;
+  padding: 0 0 0 10px;
+}
+
+.property_form {
+  border-bottom: solid;
+  padding: 10px 0 10px 10px;
+}
+
+.station_form {
+  padding: 10px 0 10px 10px;
+}
