@@ -1,0 +1,27 @@
+<%= form_with(model: @property, local: true, url: choose_new_or_edit) do |f| %>
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @property.errors.count %> 件のエラーがあります。</h2>
+      <ul>
+      <% @property.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "物件名" %>
+    <%= f.text_field :name %><br>
+    <%= f.label "賃料" %>
+    <%= f.text_field :value %><br>
+    <%= f.label "住所" %>
+    <%= f.text_field :address %>
+    <%= f.label "築年数" %>
+    <%= f.text_field :age %>
+    <%= f.label "備考" %>
+    <%= f.text_field :memo %>
+    
+    <%= f.submit "投稿！"%><br><br>
+  </div>
+<% end %>
