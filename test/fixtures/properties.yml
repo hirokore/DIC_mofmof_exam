@@ -2,14 +2,14 @@
 
 one:
   name: MyString
-  value: MyString
+  value: 1
   address: MyString
-  age: MyString
+  age: 1
   memo: MyText
 
 two:
   name: MyString
-  value: MyString
+  value: 1
   address: MyString
-  age: MyString
+  age: 1
   memo: MyText
