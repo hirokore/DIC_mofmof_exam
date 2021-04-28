@@ -37,11 +37,6 @@ class PropertysController < ApplicationController
   def edit
   end
 
-  def confirm
-    @property = Property.new(property_params)
-    render :new if @property.invalid?
-  end
-
   def destroy
     @property.destroy
     redirect_to propertys_path, notice: "削除完了"
